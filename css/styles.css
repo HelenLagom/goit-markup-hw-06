@@ -519,10 +519,13 @@ button {
 }
 .ftr-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 120px;
 }
-
+.usage {
+  margin-right: 120px;
+}
+.media {
+  margin-right: 80px;
+}
 .ftr-media {
   font-weight: 500;
   color: var(--footer-filter-color);
@@ -531,7 +534,6 @@ button {
 .ftr-socials {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
 }
@@ -542,7 +544,7 @@ button {
   width: 40px;
   height: 40px;
   fill: var(--footer-filter-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--second-accent-color);
   border-radius: 50%;
   transition-property: background-color, fill;
   transition-duration: 250ms;
@@ -558,6 +560,43 @@ button {
   color: var(--footer-filter-color);
 }
 
+.subscribe-btn {
+  display: flex;
+
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  margin-left: 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--second-accent-color);
+  gap: 16px;
+  color: var(--background-color);
+}
+.mail {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: 16px;
+}
+.mail-input {
+  height: 40px;
+  width: 264px;
+  padding: 8px 16px;
+  color: var(--background-color);
+  background-color: var(--title-color);
+  border: 1px solid var(--background-color);
+  border-radius: 4px;
+  outline: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.letter {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+}
 /* aria-label */
 
 /* Modal window */
@@ -611,19 +650,24 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill, box-shadow, border;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--accent-color);
 }
-.modal-btn:hover,
+.modal-btn:hover .modal-icon,
 .modal-btn:focus .modal-icon {
   fill: var(--background-color);
 }
 .modal-icon {
   fill: #2e2f42;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form {
   margin-top: 16px;
@@ -695,9 +739,6 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.modal-form-checkbox:checked {
 }
 
 .modal-form-custom-checkbox {
