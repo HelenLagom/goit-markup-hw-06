@@ -524,7 +524,7 @@ button {
   margin-right: 120px;
 }
 .media {
-  margin-right: 80px;
+  margin-right: auto;
 }
 .ftr-media {
   font-weight: 500;
@@ -598,11 +598,11 @@ button {
   outline: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.letter {
+/* .letter {
   position: absolute;
   top: 8px;
   right: 24px;
-}
+} */
 /* aria-label */
 
 /* Modal window */
@@ -628,6 +628,7 @@ button {
   padding-top: 72px;
   padding-right: 24px;
   padding-left: 24px;
+  padding-bottom: 24px;
   transform: translateX(-50%) translateY(-50%) scale(1);
   top: 50%;
   left: 50%;
@@ -745,6 +746,7 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 12px;
 }
 
 .modal-form-custom-checkbox {
@@ -784,6 +786,6 @@ button {
 
 .send {
   display: block;
-  margin: 24px auto;
+  margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
